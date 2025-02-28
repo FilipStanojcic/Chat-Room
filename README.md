@@ -1,5 +1,5 @@
 # Description
-Client-server communication program using TCP sockets.
+Client-server communication program using TCP sockets. Programs are run and used in command line arguments.
 Socket, threading, json, and datetime libraries are used.
 
 A maximum of three clients can connect at the same time, and a lock is implemented to ensure thread safety.
