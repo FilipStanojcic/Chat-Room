@@ -28,6 +28,9 @@ In another terminal, run the client file using "python Client.py".
 Now, the server and client can communicate, just input a message into the client terminal
 (mentioned above) and the server will act accordingly.
 
+Errors may occur if python is not installed on your local terminal. If so, make sure to download the correct
+version for your system.
+
 # Difficulties
 Running the exit command early in coding caused an error in server execution resulting in a stall and severing
 communication. Proper error handling caught the error allowing for a clean disconnect between server and client.
