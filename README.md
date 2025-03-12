@@ -15,6 +15,13 @@ Clients can send messages to the opened server, which will respond back with the
 When the maximum number of clients is reached, new connections are informed and close immediately upon any 
 attempt to connect.
 
+# Execution
+Download Server.py and Client.py to your device. In a command terminal (Windows CMD, Powershell, Terminal, etc.)
+navigate to downloads using the "cd" command (for example: C:\User\fstan> cd Downloads) or wherever the files
+have been saved. Run the server file using "python Server.py". In another terminal, run the client file using
+"python Client.py". Now, the server and client can communicate, just input a message into the client terminal
+(mentioned above) and the server will act accordingly.
+
 # Difficulties
 Running the exit command early in coding caused an error in server execution resulting in a stall and severing
 communication. Proper error handling caught the error allowing for a clean disconnect between server and client.
