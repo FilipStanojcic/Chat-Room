@@ -2,13 +2,11 @@
 -------------------------------------------------------
 [TCP Echo Communication, Client.py file]
 -------------------------------------------------------
-__updated__ = "2025-02-28"
+__updated__ = "2025-03-27"
 -------------------------------------------------------
 """
 # Imports
 import socket
-# Constants
-
 
 def start_client():
     """
@@ -51,7 +49,6 @@ def start_client():
             print(f"Received from server:\n{response}")
 
     client_socket.close()
-
 
 if __name__ == '__main__':
     start_client()
