@@ -2,7 +2,7 @@
 -------------------------------------------------------
 [TCP Echo Communication, Server.py file]
 -------------------------------------------------------
-__updated__ = "2025-02-28"
+__updated__ = "2025-03-27"
 -------------------------------------------------------
 """
 # Imports
@@ -10,13 +10,13 @@ import socket
 import threading
 import json
 from datetime import datetime
+
 # Constants
 max_clients = 3
 client_lock = threading.Lock()
 clients = {}
 available_ids = [f"Client{str(i).zfill(2)}" for i in range(
     1, max_clients + 1)]  # List of available IDs
-
 
 def handle_client(client_socket, addr):
     """
@@ -73,6 +73,7 @@ def handle_client(client_socket, addr):
 
     except Exception as e:
         print(f"Error handling client {client_name}: {e}")
+        
     finally:
         with client_lock:
             if client_name in clients:
@@ -81,7 +82,6 @@ def handle_client(client_socket, addr):
             available_ids.append(client_name)
             print(f"{client_name} disconnected and is now available for reuse.")
         client_socket.close()
-
 
 def start_server():
     """
@@ -110,7 +110,6 @@ def start_server():
                 client_thread = threading.Thread(
                     target=handle_client, args=(client_socket, addr))
                 client_thread.start()
-
 
 if __name__ == '__main__':
     start_server()
